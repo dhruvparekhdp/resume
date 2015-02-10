@@ -1,0 +1,360 @@
+/* 
+    Copyright  : All rights reserved.
+    Author     : Matt Slocum
+    Description: Custom resume page for Matt Slocum
+*/
+
+/* html5doctor.com Reset v1.6.1 */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{background-color:#ff9;color:#000;text-decoration:none}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}
+
+/* clearfix http://nicolasgallagher.com/micro-clearfix-hack/ */
+.cf:before,.cf:after{content: " ";display:table;}.cf:after{clear:both;}.cf{*zoom:1;}
+
+body {
+	background: #111111;
+	color: #9F9F9F;
+	font: 15px 'Open Sans', Arial, sans-serif;
+	min-width: 960px;
+}
+a {
+	color: #9F9F9F;
+	text-decoration: none;
+}
+a:hover {
+	color: #CCCCCC;
+	text-decoration: underline;
+}
+ul {
+	list-style: none;
+}
+.content ul {
+	list-style: disc outside;
+	margin: 0 0 14px 18px;
+}
+p {
+	margin-bottom: 16px;
+}
+dd {
+	margin: 0 0 20px 20px;
+}
+dt {
+	clear: both;
+	font-weight: bold;
+	margin: 0 0 6px 0;
+}
+
+body > header {
+	background: #252525 url('../images/edge_glow.png') no-repeat center -31px;
+	height: 100px;
+	padding: 10px 0;
+}
+.container {
+	margin: 0 auto;
+	padding: 0 10px;
+	position: relative;
+	width: 940px;
+}
+.site_title:hover {
+	color: #9F9F9F;
+	text-decoration: none;
+}
+h1.title {
+	color: #ddd;
+	font-size: 50px;
+	font-weight: 200;
+}
+h2.description {
+	font-size: 14px;
+}
+
+#main {
+	background: #252525 url('../images/edge_glow.png') no-repeat center 440px;
+	border-bottom: 1px solid #444;
+	height: 470px;
+}
+article {
+	display: none;
+	height: 400px;
+	position: absolute;
+}
+a.box:hover, a.box:focus, a.box:active {
+	color: initial;
+	text-decoration: none;
+}
+article .box {
+	background: #0085A9 url('../images/box_glow.jpg') no-repeat -11px 350px;
+	cursor: pointer;
+	display: block;
+	height: 100%;
+	text-align: center;
+	width: 200px;
+	z-index: 1;
+	transition: background-position 0.5s ease;
+	-webkit-transition: background-position 0.5s ease;
+}
+article .box:hover {
+	background-position: -11px 320px;
+	transition: background-position 0.5s ease;
+	-webkit-transition: background-position 0.5s ease;
+}
+article .box:after {
+	background: url('../images/large_icons.png') no-repeat left center;
+	content: '';
+	height: 177px;
+	left: 65px;
+	position: absolute;
+	opacity: 0.35;
+	filter: alpha(opacity=35);
+	top: 10px;
+	width: 72px;
+	transition: opacity 0.5s linear;
+	-webkit-transition: opacity 0.5s linear;
+}
+article .box:hover:after {
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+	transition: opacity 0.5s linear;
+	-webkit-transition: opacity 0.5s linear;
+}
+.about {
+	left: 10px;
+}
+.resume {
+	left: 257px;
+}
+.resume .box {
+	background-color: #799900;
+	background-position: -234px 350px;
+}
+.resume .box:hover {
+	background-position: -234px 320px;
+}
+.resume .box:after {
+	background-position: -72px center;
+	left: 30px;
+	width: 139px;
+}
+.portfolio {
+	left: 503px;
+}
+.portfolio .box {
+	background-color: #DD8000;
+	background-position: -457px 350px;
+}
+.portfolio .box:hover {
+	background-position: -457px 320px;
+}
+.portfolio .box:after {
+	background-position: -211px center;
+	left: 19px;
+	width: 161px;
+}
+.fun {
+	left: 750px;
+}
+.fun .box {
+	background-color: #C04901;
+	background-position: -680px 350px;
+}
+.fun .box:hover {
+	background-position: -680px 320px;
+}
+.fun .box:after {
+	background-position: -372px center;
+	left: 36px;
+	width: 124px;
+}
+article .content {
+	display: none;
+	height: 396px;
+	left: 240px;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 700px;
+}
+article .content:after, article .content:before {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(37,37,37,0)), color-stop(100%,rgba(37,37,37,1)));
+	background: linear-gradient(to bottom,  rgba(37,37,37,0) 0%,rgba(37,37,37,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00252525', endColorstr='#252525',GradientType=0 );
+	bottom: 0;
+	content: '';
+	height: 10px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+}
+article .content:before {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(37,37,37,1)), color-stop(100%,rgba(37,37,37,0)));
+	background: linear-gradient(to bottom,  rgba(37,37,37,1) 0%,rgba(37,37,37,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#252525', endColorstr='#00252525',GradientType=0 );
+	bottom: auto;
+	height: 10px;
+	top: 0;
+}
+article.about .content {
+	border-top: 4px solid #0085A9;
+}
+article.resume .content {
+	border-top: 4px solid #799900;
+}
+article.portfolio .content {
+	border-top: 4px solid #DD8000;
+}
+article.fun .content {
+	border-top: 4px solid #C04901;
+}
+article.about a { color: #00B2E2; }
+article.about a:hover { color: #00B2E2; }
+article.resume a { color: #799900; }
+article.resume a:hover { color: #799900; }
+article.portfolio a { color: #DD8000; }
+article.portfolio a:hover { color: #DD8000; }
+article.fun a { color: #C04901; }
+article.fun a:hover { color: #C04901; }
+
+article .box h1 {
+	color: white;
+	font-size: 28px;
+	font-weight: 200;
+	top: 228px;
+	position: relative;
+}
+article .box h2 {
+	color: white;
+	font-size: 15px;
+	font-weight: 200;
+	position: relative;
+	top: 240px;
+	border-top: 1px solid rgba(255,255,255,0.3);
+	width: 140px;
+	margin: 0 auto;
+	padding: 12px 0 0;
+	text-transform: lowercase;
+}
+.viewport { height: 100%; overflow: hidden; position: relative; }
+.overview { list-style: none; position: absolute; padding: 10px 0 0; left: 0; top: 0; width: 670px; }
+.scrollbar { position: relative; float: right; width: 15px; z-index: 2; }
+.track { height: 388px; width:13px; position: relative; padding: 0 1px; margin-top:10px; }
+.thumb { background-color: #444; border-radius: 10px; height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
+.thumb .end { display: none; }
+.content:hover .thumb { background-color: #666; }
+.content .thumb:active { background-color: #888; }
+.disable{ display: none; }
+.noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
+
+
+footer {
+	background-color: #111;
+	border-top: 1px solid #000;
+	height: 40px;
+	padding: 30px 0;
+	position: relative;
+}
+.contact_info {
+	float: right;
+}
+.contact_info li {
+	float: left;
+	padding: 0 0 10px 30px;
+}
+
+.icon {
+	background: url('../images/small_icons.png') no-repeat 0 0;
+	display: inline-block;
+	height: 18px;
+	vertical-align: middle;
+	width: 24px;
+}
+.icon.icon-email {
+	background-position: 0 0;
+	margin-right: 2px;
+}
+.icon.icon-phone {
+	background-position: -24px 0
+}
+
+.content img {
+	margin: 0 20px 20px 0;
+}
+.portfolio .content img {
+	border: 5px solid #666;
+	border-radius: 5px;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+
+.fancybox-lock .fancybox-overlay {
+	overflow: auto;
+	overflow-y: auto;
+}
+.fancybox-skin {
+	background-color: #111;
+}
+
+@media only screen and (max-width: 750px) {
+	body {
+		min-width: 0
+	}
+	.container {
+		width: auto;
+	}
+	#main {
+		background-image: none;
+		height: auto;
+		padding: 0 0 20px;
+	}
+	article {
+		position: static;
+		width: 100%;
+		height: auto;
+	}
+	article .box {
+		height: 70px;
+		width: 100%;
+	}
+	article .box:after {
+		display: none;
+	}
+	article .box h1 {
+		float: left;
+		margin: 15px 0 0 20px;
+		position: static;
+	}
+	article .box h2 {
+		border: 0;
+		float: right;
+		margin: 13px 20px 0 0;
+		position: static;
+		text-align: right;
+	}
+	.scrollbar {
+		display: none;
+	}
+	#main article .content {
+		border: 0;
+		height: auto;
+		left: auto;
+		position: static;
+		width: 100%;
+	}
+	article .content:after, article .content:before {
+		display: none;
+	}
+	.overview {
+		position: static;
+		width: 100%;
+	}
+	.content img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+}
