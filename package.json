@@ -1,0 +1,15 @@
+{
+    "name": "resume.sloky.net",
+    "version": "0.1.0",
+    "author": "Matt",
+    "devDependencies": {
+        "grunt": "~0.4.4",
+        "grunt-contrib-less": "0.11.0",
+        "grunt-contrib-watch": "0.6.1",
+        "grunt-contrib-requirejs": "0.4.3",
+        "grunt-karma": "0.8.0",
+        "karma-jasmine": "0.2.0",
+        "karma-junit-reporter": "0.2.1",
+        "karma-phantomjs-launcher": "0.1.4"
+    }
+}
